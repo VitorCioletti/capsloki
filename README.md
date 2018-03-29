@@ -29,19 +29,35 @@ Simple program that activate and deatctivate capslock to increase stress and ang
 
 ### 2 Paste it anywhere you want 
 
-![](/Images/saveSomewhere.PNG)
+<p align="center" >
+    <a>
+        <img alt="logo" src="/Images/saveSomewhere.PNG">
+    </a>
+</p>
 
 ### 3 Get the path you saved the executable and paste it on ```Path``` in ```Environment Variables```
 
-![](/Images/path.png)
+<p align="center" >
+    <a>
+        <img alt="logo" src="/Images/path.png">
+    </a>
+</p>
 
 ### 4 Just type 'capsloki' at CMD
 
-![](/Images/cmdExecution.PNG)
+<p align="center" >
+    <a>
+        <img alt="logo" src="/Images/cmdExecution.PNG">
+    </a>
+</p>
 
 or just ```WIN + R```
 
-![](/Images/winR.PNG)
+<p align="center" >
+    <a>
+        <img alt="logo" src="/Images/winR.PNG">
+    </a>
+</p>
 
 ### 5 How to close the program
 You can't :)
