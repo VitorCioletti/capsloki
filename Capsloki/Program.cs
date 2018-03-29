@@ -1,11 +1,10 @@
 ﻿namespace LokiCapsLock
 {
-	using System;
-	using System.Runtime.InteropServices;
-	using System.Threading;
-	using System.Timers;
+    using System;
+    using System.Runtime.InteropServices;
+    using System.Threading;
 
-	class Program
+    class Program
     {
 		[DllImport("user32.dll")]
 		static extern void keybd_event(byte bVk, byte bScan, uint dwFlags, UIntPtr dwExtraInfo);
@@ -16,13 +15,13 @@
 
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Loki CapsLock sucessfully turned on...");
+			Console.WriteLine("Capsloki sucessfully turned on...");
 
-			//// Configure your own interval between crazyness
+			// Configure your own interval between crazyness
 			Func<int> calculateSleepTime = () =>
-				new Random().Next(120000, 240000);
+				new Random().Next(120000, 240000); // 2 to 4 minutes
 
-			Action turnCapsLockOn = () =>
+            Action turnCapsLockOn = () =>
 			{
 				keybd_event(CAPSLOCK, 0x45, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
 				keybd_event(CAPSLOCK, 0x45, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, (UIntPtr)0);
@@ -34,22 +33,23 @@
 				keybd_event(0x14, 0x45, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, (UIntPtr)0);
 			};
 
-			Action<object, ElapsedEventArgs> execute = (o, e) =>
-			{
-				turnCapsLockOn();
-				Console.WriteLine(e.SignalTime);
-				Thread.Sleep(250);
+			Action execute = () => 
+            { 
+                Thread.Sleep(300);
+                turnCapsLockOn();
+				Thread.Sleep(350);
 				turnCapsLockOff();
 			};
 
-			var aTimer = new System.Timers.Timer();
+            for (;;)
+            {
+                var begin = DateTime.Now;
 
-			aTimer.Elapsed += new ElapsedEventHandler(execute);
-			aTimer.Interval = 300;
+                while (DateTime.Now < begin.AddSeconds(15))
+                    execute();
 
-			aTimer.Enabled = true;
-
-			Console.ReadKey();
+                Thread.Sleep(calculateSleepTime());
+            }
 		}
 	}
 }
