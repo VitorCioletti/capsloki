@@ -12,9 +12,9 @@
 
 Simple program that activate and deatctivate capslock to increase stress and anger productivity
 
-* [Changing Output Type](#Change-output-type-to-Windows-Application-and compile-the-code)
+* [Changing Output Type](#Change-output-type-to-Windows-Application-and-compile-the-code)
 * [Saving .exe](#Get-the-.exe-in-'bin/Debug/'-and-paste-anywhere-you-want)
-* [Pasting path as envinronment variable](#Get-the-path-you-save-the-executable-and-paste-it-on-'Path'-in-'Environment-Variables')
+* [Pasting path as environment variable](#Get-the-path-you-save-the-executable-and-paste-it-on-'Path'-in-'Environment-Variables')
 * [Callling the program by cmd](#Just-type-'capsloki'-at-CMD)
 
 
@@ -38,6 +38,6 @@ Simple program that activate and deatctivate capslock to increase stress and ang
 
 ![](/Images/cmdExecution.PNG)
 
-or just
+or just 'WIN + R'
 
 ![](/Images/winR.PNG)
