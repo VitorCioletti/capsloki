@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LokiCapsLock", "ConsoleApp1\LokiCapsLock.csproj", "{F9D98F25-A7B0-4616-B162-41947E31B9F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9D98F25-A7B0-4616-B162-41947E31B9F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9D98F25-A7B0-4616-B162-41947E31B9F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9D98F25-A7B0-4616-B162-41947E31B9F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9D98F25-A7B0-4616-B162-41947E31B9F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AADBFCEB-2C6A-4C91-97E6-3BE9E0BF22EE}
+	EndGlobalSection
+EndGlobal
