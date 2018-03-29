@@ -15,8 +15,6 @@
 
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Capsloki sucessfully turned on...");
-
 			// Configure your own interval between crazyness
 			Func<int> calculateSleepTime = () =>
 				new Random().Next(120000, 240000); // 2 to 4 minutes
