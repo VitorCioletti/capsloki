@@ -1,7 +1,7 @@
 
 <p align="center" >
-    <a>
-        <img alt="logo" src="Images/loki.png" href="https://www.iconfinder.com/Sakagami">
+    <a href="https://www.iconfinder.com/Sakagami">
+        <img alt="logo" src="Images/loki.png">
     </a>
 </p>
 
