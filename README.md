@@ -30,7 +30,7 @@ Simple program that activate and deatctivate capslock to increase stress and ang
 
 ![](/Images/saveSomewhere.PNG)
 
-### Get the path you save the executable and paste it on 'Path' in 'Environment Variables'
+### Get the path you save the executable and paste it on ```Path``` in 'Environment Variables'
 
 ![](/Images/path.png)
 
@@ -38,6 +38,6 @@ Simple program that activate and deatctivate capslock to increase stress and ang
 
 ![](/Images/cmdExecution.PNG)
 
-or just 'WIN + R'
+or just ```WIN + R```
 
 ![](/Images/winR.PNG)
