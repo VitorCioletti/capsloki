@@ -26,11 +26,11 @@ Simple program that activate and deatctivate capslock to increase stress and ang
 
 ![](/Images/outputType.PNG)
 
-### Get the .exe in 'bin/Debug/' and paste anywhere you want
+### Get the .exe in ```bin/Debug/``` and paste anywhere you want
 
 ![](/Images/saveSomewhere.PNG)
 
-### Get the path you save the executable and paste it on ```Path``` in 'Environment Variables'
+### Get the path you save the executable and paste it on ```Path``` in ```Environment Variables```
 
 ![](/Images/path.png)
 
