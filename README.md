@@ -10,7 +10,7 @@
 
 
 
-Simple program that activate and deatctivate capslock to increase stress and anger productivity
+Simple program that activate and deactivate capslock to increase stress and anger productivity
 
 * [1 - Changing Output Type](#1-Download-```Capsloki.exe```)
 * [2 - Saving .exe](#2-Paste-it-anywhere-you-want )
