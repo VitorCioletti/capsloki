@@ -16,8 +16,6 @@ Simple program that activate and deactivate capslock to increase stress and AnGe
 * [2 - Saving .exe](#2-Paste-it-anywhere-you-want )
 * [3 - Pasting path as environment variable](#3-Get-the-path-you-save-the-executable-and-paste-it-on-'Path'-in-'Environment-Variables')
 * [4 - Callling the program by cmd](#4-Just-type-'capsloki'-at-CMD)
-* [5 - How to close the program](#5-How-to-close-the-program)
-
 
 
 
@@ -58,6 +56,3 @@ or just ```WIN + R```
         <img alt="logo" src="/Images/winR.PNG">
     </a>
 </p>
-
-### 5 How to close the program
-You can't :)
