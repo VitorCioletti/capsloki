@@ -13,13 +13,15 @@
 
         private const int _CAPSLOCK = 0x14;
 
-        private CancellationToken _token = new CancellationToken();
+        private CancellationToken _token;
 
         /// <summary>
         /// Starts your happiness and your co-workers stress :)
         /// </summary>
         public void Start()
         {
+            _token = new CancellationToken();
+
             Task.Run(() =>
             {
                 Action executeHappiness = () =>
