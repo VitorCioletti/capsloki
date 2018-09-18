@@ -47,7 +47,7 @@
         }
 
         /// <summary>
-        /// Stops your happiness and your co-workers stress :)
+        /// Stops your happiness and your co-workers stress :(
         /// </summary>
         public void Stop()
         {
