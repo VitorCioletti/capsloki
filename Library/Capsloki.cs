@@ -15,11 +15,14 @@
 
         private CancellationToken _token = new CancellationToken();
 
+        /// <summary>
+        /// Starts your happiness and your co-workers stress :)
+        /// </summary>
         public void Start()
         {
             Task.Run(() =>
             {
-                Action executeHappyness = () =>
+                Action executeHappiness = () =>
                 {
                     PressCapslock();
                     Thread.Sleep(350);
@@ -34,13 +37,16 @@
                     var begin = DateTime.Now;
 
                     while (DateTime.Now < begin.AddSeconds(15))
-                        executeHappyness();
+                        executeHappiness();
 
                     Thread.Sleep(CalculateSleepTime());
                 }
             });
         }
 
+        /// <summary>
+        /// Stops your happiness and your co-workers stress :)
+        /// </summary>
         public void Stop()
         {
             var source = new CancellationTokenSource();
