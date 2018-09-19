@@ -7,23 +7,47 @@
 
     public class Capsloki
     {
-        private const int _KEYEVENTF_EXTENDEDKEY = 0x1;
+        private CancellationTokenSource _sourceToken;
 
-        private const int _KEYEVENTF_KEYUP = 0x2;
+        private bool _running;
 
-        private const int _CAPSLOCK = 0x14;
+        private int _intervalFrom;
 
-        private CancellationToken _token;
+        private int _intervalTo;
+
+        /// <summary>
+        /// Initializes a new instance of Capsloki
+        /// </summary>
+        /// <param name="intervalFrom">Set the beginning of the sleep interval</param>
+        /// <param name="intervalTo">Set the end of the sleep interval</param>
+        public Capsloki(int intervalFrom, int intervalTo)
+        {
+            _intervalFrom = intervalFrom;
+            _intervalTo = intervalTo;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of Capsloki
+        /// </summary>
+        public Capsloki()
+        {
+            _intervalFrom = 120000;
+            _intervalTo = 240000;
+        }
 
         /// <summary>
         /// Starts your happiness and your co-workers stress :)
         /// </summary>
         public void Start()
         {
-            _token = new CancellationToken();
+            if (_running) return;
+
+            _sourceToken = new CancellationTokenSource();
 
             Task.Run(() =>
             {
+                _running = true;
+
                 Action executeHappiness = () =>
                 {
                     PressCapslock();
@@ -34,12 +58,13 @@
 
                 for (;;)
                 {
-                    if (_token.IsCancellationRequested) return;
-
                     var begin = DateTime.Now;
 
                     while (DateTime.Now < begin.AddSeconds(15))
+                    {
+                        if (_sourceToken.IsCancellationRequested) return;
                         executeHappiness();
+                    }
 
                     Thread.Sleep(CalculateSleepTime());
                 }
@@ -51,11 +76,9 @@
         /// </summary>
         public void Stop()
         {
-            var source = new CancellationTokenSource();
+            _running = false;
 
-            _token = source.Token;
-
-            source.Cancel();
+            _sourceToken.Cancel();
         }
 
         [DllImport("user32.dll")]
@@ -63,10 +86,14 @@
 
         private void PressCapslock()
         {
+            const int _KEYEVENTF_EXTENDEDKEY = 0x1;
+            const int _KEYEVENTF_KEYUP = 0x2;
+            const int _CAPSLOCK = 0x14;
+
             keybd_event(_CAPSLOCK, 0x45, _KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
             keybd_event(_CAPSLOCK, 0x45, _KEYEVENTF_EXTENDEDKEY | _KEYEVENTF_KEYUP, (UIntPtr)0);
         }
 
-        private int CalculateSleepTime() => new Random().Next(120000, 240000);
+        private int CalculateSleepTime() => new Random().Next(_intervalFrom, _intervalTo);
     }
 }
