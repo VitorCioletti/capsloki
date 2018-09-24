@@ -63,6 +63,7 @@
                     while (DateTime.Now < begin.AddSeconds(15))
                     {
                         if (_sourceToken.IsCancellationRequested) return;
+                        
                         executeHappiness();
                     }
 
